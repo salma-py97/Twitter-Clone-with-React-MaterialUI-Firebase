@@ -17,6 +17,7 @@
   margin-left: 20px;
   font-size: 20px;
   border: none;
+  outline-width: 0;
 }
 .input:focus {
   border: 0;
@@ -38,5 +39,5 @@
 .tweetBox__imageInput {
   border: none;
   padding: 10px;
-
+outline-width: 0;
 }
