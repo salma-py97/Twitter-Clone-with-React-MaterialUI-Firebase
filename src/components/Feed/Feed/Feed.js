@@ -13,7 +13,7 @@ const Feed = () => {
 
   useEffect(() => {
     db.collection('posts').onSnapshot(snapshot => (
-      setPosts(snapshot.docs.map(doc => doc.data()))
+      setPosts(snapshot.docs.map(doc => ({id:doc.id, data: doc.data()})))
     ))
   }, [])
 
@@ -32,7 +32,7 @@ const Feed = () => {
       <FlipMove>
         {posts.map(post => (
           // for the key we need to use the document id from firebase and use it as a key
-          <Post key={post.text} displayName={post.displayName} username={post.username} verified={post.verified} 
+          <Post key={post.id} displayName={post.displayName} username={post.username} verified={post.verified} 
           text={post.text}
           avatar={post.avatar} image={post.image} />
           ))}
