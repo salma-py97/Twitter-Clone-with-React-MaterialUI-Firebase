@@ -32,9 +32,9 @@ const Feed = () => {
       <FlipMove>
         {posts.map(post => (
           // for the key we need to use the document id from firebase and use it as a key
-          <Post key={post.id} displayName={post.displayName} username={post.username} verified={post.verified} 
-          text={post.text}
-          avatar={post.avatar} image={post.image} />
+          <Post key={post.id} displayName={post.data.displayName} username={post.data.username} verified={post.data.verified} 
+          text={post.data.text}
+          avatar={post.data.avatar} image={post.data.image} />
           ))}
       </FlipMove>
 
