@@ -40,7 +40,7 @@ const Post = forwardRef(({
 						<p>{text}</p>
 					</div>
 				</div>
-				<img src={image} alt="" />
+				<img src={image} alt="" className="post__image" />
 
 				<div className="post__footer">
 					<div className="post__icons">

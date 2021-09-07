@@ -7,6 +7,7 @@
 .post__body > img {
   border-radius: 20px;
   width: 100%;
+  object-fit: contain;
 }
 .post__headerSpecial {
   font-weight: 600;
@@ -35,6 +36,7 @@
 .post__body {
   flex: 1;
   padding: 10px;
+  width: 100%;
 }
 .post__footer {
   display: flex;
